@@ -1,4 +1,4 @@
-package customer;
+package mycom.collection.customer;
 
 public class Customer implements CustomerADT {
 	

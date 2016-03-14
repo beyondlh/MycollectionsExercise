@@ -1,4 +1,4 @@
-package customer;
+package mycom.collection.customer;
 
 public class NegativeBalanceException extends Exception {
 

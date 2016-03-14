@@ -1,4 +1,4 @@
-package linkedlist;
+package mycom.collection.linkedlist;
 
 public interface LinkedListADT<Item> {
 	//public LinkedList()

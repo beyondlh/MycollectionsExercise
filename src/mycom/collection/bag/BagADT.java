@@ -1,4 +1,4 @@
-package bag;
+package mycom.collection.bag;
 
 public interface BagADT<Item> {
 	//public Bag()

@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.List;
 
-import bag.Bag;
+import mycom.collection.bag.Bag;
 
 import queue.LinkedQueue;
 import queue.ResizingArrayQueue;

@@ -1,4 +1,4 @@
-package bag;
+package mycom.collection.bag;
 
 public class Node<Item> {
 	private Item item;

@@ -1,4 +1,4 @@
-package bag;
+package mycom.collection.bag;
 
 import java.util.Iterator;
 

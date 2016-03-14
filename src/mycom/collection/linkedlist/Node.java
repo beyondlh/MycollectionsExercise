@@ -1,4 +1,4 @@
-package linkedlist;
+package mycom.collection.linkedlist;
 
 public class Node<Item> {
 	private Item item;
