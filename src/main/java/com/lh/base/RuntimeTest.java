@@ -1,6 +1,8 @@
 package com.lh.base;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Created by lh on 2016/10/31.
@@ -31,5 +33,8 @@ public class RuntimeTest {
         rt.runFinalization();  //运行finalize方法。
         rt.gc();  //运行垃圾回收器（官方解释） 实际上这种运行可能只是建议性运行
         rt.exit(0);  //参数 如果是非0代表异常终止，多放在捕获异常的catch块中
+
+        Collection children=children = new ArrayList();//注意由于这里没有加泛型，所以很多黄线警告
+
     }
 }
