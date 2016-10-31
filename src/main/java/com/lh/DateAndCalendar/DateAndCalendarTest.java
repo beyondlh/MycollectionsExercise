@@ -48,5 +48,12 @@ public class DateAndCalendarTest {
         System.out.println("我的生日是:"+(ddf.format(new Date(muBirthday.getTimeInMillis()))));
 
         System.out.println("================================");
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("2");
+//        stringBuilder.toString();
+        System.out.println(stringBuilder.getClass().getSimpleName());
+        //转换成String
+        System.out.println(stringBuilder.getClass().getSimpleName());
+        System.out.println(stringBuilder.toString().getClass().getSimpleName());
     }
 }
