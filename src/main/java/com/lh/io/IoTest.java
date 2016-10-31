@@ -10,9 +10,9 @@ public class IoTest {
     {
         writeDataToFile();
         System.out.println("-------------------------");
-     /*  readDataFromFile();
+        readDataFromFile();
         System.out.println("-------------------------");
-        copyFile("D:"+File.separator, "cxyapi.txt", "D:"+File.separator, "cxyapi复制.txt");*/
+        copyFile("D:"+File.separator, "test.txt", "D:"+File.separator, "test复制.txt");
     }
 
     /**写数据到文件 站在内存角度 将内存输出到文件，所以应该用输出流
@@ -65,6 +65,36 @@ public class IoTest {
      */
     public static void copyFile(String fromPath,String fromFileName,String toPath,String tofileName) throws Exception
     {
+        long st=System.currentTimeMillis();
+        File f1=new File(fromPath+File.separator+fromFileName);
+        File f2=new File(toPath+File.separator+tofileName);
 
+        if(!f1.exists())
+        {
+            System.out.println("源文件不存在!");
+            return;
+        }
+
+        if(!f2.exists())
+        {
+            f2.createNewFile();
+        }
+        //装饰器
+        //new BufferedWriter(new OutputStreamWriter(new BufferedOutputStream(new FileOutputStream(f2))));
+        BufferedInputStream br=new BufferedInputStream(new FileInputStream(f1));
+        BufferedOutputStream bw=new BufferedOutputStream(new FileOutputStream(f2));
+        //水桶打水的方式
+        byte[] temp=new byte[256]; //“数据桶”，这个桶的大小视数据大小情况而定
+        int read=0;
+        while((read=br.read(temp))!=-1)
+        {
+            bw.write(temp,0,read);
+        }
+        bw.flush();
+        //关闭操作应该放到finally块中，这里简单演示
+        bw.close();
+        br.close();
+        long et=System.currentTimeMillis();
+        System.out.println("拷贝完成，耗时:"+(et-st));
     }
 }
