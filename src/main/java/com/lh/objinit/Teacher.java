@@ -35,6 +35,9 @@ public class Teacher extends Person {
         System.out.println("Teacher初始化块执行后：name=" + this.name + " ,age=" + age
                 + " ,sex=" + sex);
     }
+    static {
+        System.out.println("static自由块被执行");
+    }
 }
 
 class TestInit {
