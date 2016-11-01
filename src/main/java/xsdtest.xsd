@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema  xmlns="http://www.hdsxtech.com/schema/myschematest"
+			 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.hdsxtech.com/schema/myschematest"
+			elementFormDefault="qualified" >
+	<xsd:element name="cat">
+		<xsd:complexType>
+			<xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+			<xsd:attribute name="sex" type="xsd:string" use="required"></xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="dog">
+		<xsd:complexType>
+			<xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+			<xsd:attribute name="sex" type="xsd:string" use="required"></xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="pets">
+		<xsd:choice minOccurs="1" maxOccurs="unbounded">
+			<xsd:element ref="cat"></xsd:element>
+			<xsd:element ref="dog"></xsd:element>
+		</xsd:choice>
+	</xsd:complexType>
+</xsd:schema>
