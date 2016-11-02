@@ -1,5 +1,6 @@
 package com.lh.nio;
 
+import java.io.File;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
@@ -20,9 +21,9 @@ public class NioTest {
         System.out.println("FileSystem :" + path2.getFileSystem());
         System.out.println("Root       :" + path2.getRoot());
         System.out.println("Parent     :" + path2.getParent());
-        System.out.println("SubPath    :" + path2.subpath(0,1));
-        System.out.println("SubPath    :" + path2.subpath(0,2));
-        System.out.println("SubPath    :" + path2.subpath(0,3));
+        System.out.println("SubPath    :" + path2.subpath(0, 1));
+        System.out.println("SubPath    :" + path2.subpath(0, 2));
+        System.out.println("SubPath    :" + path2.subpath(0, 3));
         System.out.println("URI        :" + path2.toUri());
         System.out.println("resolveSibling        :" + path2.resolveSibling("mmm.exe"));
         System.out.println("resolve        :" + path2.resolve(path));
@@ -33,10 +34,23 @@ public class NioTest {
             System.out.println(name);
         }
 
-     FileSystem fileSystem = FileSystems.getDefault();
-        Set<String > views = fileSystem.supportedFileAttributeViews();
+        FileSystem fileSystem = FileSystems.getDefault();
+        Set<String> views = fileSystem.supportedFileAttributeViews();
         for (String view : views) {
             System.out.println(view);
         }
+
+
+        Iterable<Path> pathIterator = FileSystems.getDefault().getRootDirectories();
+        for (Path p : pathIterator) {
+            System.out.println(p);
+        }
+
+
+        File[] files = File.listRoots();
+        for (File f : files) {
+            System.out.println(f);
+        }
     }
+
 }

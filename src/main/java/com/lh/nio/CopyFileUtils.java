@@ -2,6 +2,8 @@ package com.lh.nio;
 
 import java.io.*;
 import java.nio.channels.FileChannel;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
@@ -92,9 +94,18 @@ public class CopyFileUtils {
         }
     }
 
+
+    static void copy() throws IOException {
+        Path path1 = Paths.get("D:" + File.separator + "桌面文件备份\\data50.csv");
+        Path path2  = Paths.get("D:\\test333\\data50.csv");
+        Files.copy(path1,path2);
+    }
+
     public static void main(String[] args) throws Exception {
         /*File.separator 平台无关*/
-        File file = Paths.get("D:" + File.separator + "桌面文件备份\\data50.csv").toFile();
-        CopyFileUtils.copyFile(file.getPath(), "F:\\路况评定去掉下行数据\\data50.csv", true);
+/*        File file = Paths.get("D:" + File.separator + "桌面文件备份\\data50.csv").toFile();
+        CopyFileUtils.copyFile(file.getPath(), "F:\\路况评定去掉下行数据\\data50.csv", true);*/
+
+        copy();
     }
 }
