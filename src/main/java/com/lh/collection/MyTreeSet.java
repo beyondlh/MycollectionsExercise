@@ -1,5 +1,7 @@
 package com.lh.collection;
 
+import com.lh.Bird;
+
 import java.util.Comparator;
 import java.util.TreeSet;
 
@@ -52,50 +54,5 @@ public class MyTreeSet {
             System.out.println(ele.getName());
         }
 
-    }
-}
-class Apple implements Comparable<Apple> {
-
-    public Apple(double weight){
-        this.weight = weight;
-    }
-
-    double weight;
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    @Override
-    public int compareTo(Apple apple) {
-        if(this.weight>apple.getWeight()){
-            return 1;
-        }else if(this.weight<apple.getWeight()){
-            return -1;
-        }else {
-            return 0;
-        }
-    }
-
-}
-
-class Bird {
-    private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public Bird(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "Bird[name=" + name + "]";
     }
 }
