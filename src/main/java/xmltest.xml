@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <forest:dog xmlns="http://www.w3.org/2001/XMLSchema"
-             xmlns:forest="http://www.hdsxtech.com/schema/myschematest" sex="d" name="rr">
+             xmlns:forest="http://www.hdsxtech.com/schema/myschematest" sex="gong" name="tom">
 
 </forest:dog>

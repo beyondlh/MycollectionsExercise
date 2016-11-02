@@ -1,4 +1,4 @@
-package com.lh.DateAndCalendar;
+package com.lh.dateandcalendar;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
