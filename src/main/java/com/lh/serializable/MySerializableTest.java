@@ -10,6 +10,14 @@ import java.io.*;
 public class MySerializableTest {
     public static void main(String[] args) {
         Apple apple = new Apple(2);
+
+        /*只序列化属性*/
+        try(ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("D:\\Apple.txt"))) {
+            objectOutputStream.writeUTF(String.valueOf(apple.getWeight()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         try(ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("D:\\Apple.txt"))) {
             objectOutputStream.writeObject(apple);
         } catch (IOException e) {
