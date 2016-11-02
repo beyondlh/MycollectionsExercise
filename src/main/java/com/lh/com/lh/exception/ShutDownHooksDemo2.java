@@ -1,4 +1,4 @@
-package com.lh.com.lh.yichang;
+package com.lh.com.lh.exception;
 
 /**
  * Created by lh on 2016/10/23.
