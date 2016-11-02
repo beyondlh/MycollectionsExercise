@@ -3,6 +3,7 @@ package com.lh.xml;
 import org.dom4j.*;
 import org.dom4j.io.SAXReader;
 
+import java.io.File;
 import java.nio.file.Paths;
 import java.util.List;
 
@@ -12,7 +13,10 @@ import java.util.List;
 public class ParserXML {
     public static void main(String[] args) throws DocumentException {
         SAXReader reader = new SAXReader();
-        Document document = reader.read(Paths.get("F:\\IntelljWorkSpace\\MycollectionsExercise\\src\\main\\java\\xmltest.xml").toFile());
+        File file = Paths.get("F:" + File.separator + "IntelljWorkSpace\\MycollectionsExercise\\src\\main\\java\\xmltest.xml").toFile();
+        File targetFile = new File("D:\\4.xml");
+        file.renameTo(targetFile);
+        Document document = reader.read(targetFile);
         Element element = document.getRootElement();
         List<Attribute> nodeList = element.attributes();
         for (Attribute attr : nodeList) {

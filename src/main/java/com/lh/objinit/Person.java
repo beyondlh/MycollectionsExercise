@@ -12,7 +12,7 @@ class Person {
         sex = "Male";
         System.out.println("name=" + name + " ,age=" + age + " ,sex=" + sex);
     }
-    public Person(String theName) {
+    public Person(String theName,String... more) {
         System.out.println("构造器Person(String theName)被调用");
         name = theName;
         System.out.println("name=" + name + " ,age=" + age + " ,sex=" + sex);
