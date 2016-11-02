@@ -5,18 +5,35 @@ import java.io.Serializable;
 /**
  * Created by lh on 2016/11/2.
  */
-public class Bird implements Serializable{
+public class Bird implements Serializable {
 
     private static final long serialVersionUID = 7479005249039605620L;
     private String name;
+    //    private  int weight;
+//    添加上transient关键字后序列化得不到这个值
+    private transient int weight;
+
+    public Bird(String name) {
+        this.name = name;
+        this.weight = 50;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
 
     public String getName() {
         return name;
     }
 
-    public Bird(String name) {
-        this.name = name;
-    }
 
     @Override
     public String toString() {
