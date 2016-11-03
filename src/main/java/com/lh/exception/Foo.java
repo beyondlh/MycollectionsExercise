@@ -11,7 +11,25 @@ public class Foo {
     public static void main(String args[]) {
         Foo t = new Foo();
         int b = t.get();
+        int[] m = {1,3};
         System.out.println(b);
+        System.out.println(m[6]);
+
+        /*
+        好像看起来应该是可以编译的，但是本程序编译期间错误。
+        try 子句执行打印的I/O操作，并且catch 子句捕获 IOException 异常。
+        但是这不能编译，因为println 方法没有声明会抛出任何被检查异常，而 IOException 却正是一个被检查异常。
+        Exception 类的异常包括 checked exception 和 unchecked exception（unchecked exception也称运行时异常RuntimeException）
+        Java语言规范中描述道：如果一个catch 子句要捕获一个类型为 E 的被检查异常，
+        而其相对应的try 子句如不能抛出E 的某种子类型的异常，那么这就是一个编译期错误。
+        * */
+
+
+       /* try {
+            System.out.println("Hello world");
+        } catch (IOException e) {
+            System.out.println("I've never seenprintln fail!");
+        }*/
     }
 
     public int get() {
@@ -19,6 +37,15 @@ public class Foo {
             return 1;
         } finally {
             return 2;
+        }
+    }
+}
+
+class Arcane2 {
+    public static void main(String[] args) {
+        try {
+        } catch (Exception e) {
+            System.out.println("This can't happen");
         }
     }
 }
