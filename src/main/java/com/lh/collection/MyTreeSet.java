@@ -53,6 +53,5 @@ public class MyTreeSet {
         for (Bird ele : set) {
             System.out.println(ele.getName());
         }
-
     }
 }
