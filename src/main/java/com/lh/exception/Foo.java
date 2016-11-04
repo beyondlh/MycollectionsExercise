@@ -11,9 +11,7 @@ public class Foo {
     public static void main(String args[]) {
         Foo t = new Foo();
         int b = t.get();
-        int[] m = {1,3};
         System.out.println(b);
-        System.out.println(m[6]);
 
         /*
         好像看起来应该是可以编译的，但是本程序编译期间错误。
@@ -32,6 +30,9 @@ public class Foo {
         }*/
     }
 
+    /*：finally 语句块是在 try 或者 catch 中的 return 语句之前执行的。
+    因为 finally 中的 return 2；语句要在 try 中的 return 1；语句之前执行，
+    那么 finally 中的 return 1；语句执行后，把程序的控制权转交给了它的调用者 main（）函数，并且返回值为 2*/
     public int get() {
         try {
             return 1;

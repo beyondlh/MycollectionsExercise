@@ -8,7 +8,6 @@ import java.util.Set;
  */
 public class MyHashSet {
     public static void main(String[] args) {
-
         Set<String> hs = new HashSet<String>(3);
 
        /* HashSet的构造器：HashSet(int initialCapacity, float loadFactor)
