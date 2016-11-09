@@ -98,5 +98,7 @@ public class IoTest {
         br.close();
         long et=System.currentTimeMillis();
         System.out.println("拷贝完成，耗时:"+(et-st));
+
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(""));
     }
 }

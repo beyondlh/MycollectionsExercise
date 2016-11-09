@@ -6,7 +6,6 @@ public abstract class AbstractHandler implements InvocationHandler {
 
 	/** The target object. */
 	private Object targetObject;
-	
 	/**
 	 * Sets the target object.
 	 *

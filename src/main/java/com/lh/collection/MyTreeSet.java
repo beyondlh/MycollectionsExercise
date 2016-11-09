@@ -20,7 +20,6 @@ public class MyTreeSet {
         System.out.println(ts.size());
 
 
-
 //
 //        TreeSet<Apple> set = new TreeSet<Apple>();
 //        set.add(new Apple(2.3));
@@ -29,8 +28,6 @@ public class MyTreeSet {
 //        for (Apple ele : set) {
 //            System.out.println(ele.getWeight());
 //        }
-
-
 
 
         TreeSet<Bird> set = new TreeSet<Bird>(new Comparator<Bird>() {
