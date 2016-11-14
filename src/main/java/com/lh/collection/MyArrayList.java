@@ -37,7 +37,7 @@ public class MyArrayList {
 
         int[] a = {1, 2, 3, 4};
         List listArrya = Arrays.asList("mmmmmm");
-        listArrya.set(0,"89");
+        listArrya.set(0, "89");
         System.out.println("test.size():" + test.size());
         System.out.println("listArrya.size():" + listArrya.size());
 
@@ -53,5 +53,6 @@ public class MyArrayList {
         list2.removeAll(Collections.singleton(null));
 
         System.out.println(list2);
+
     }
 }
