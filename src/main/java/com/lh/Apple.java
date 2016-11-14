@@ -45,4 +45,18 @@ public class Apple implements Comparable<Apple>, Serializable {
         }
     }
 
+    @Override
+    public int hashCode() {
+        return (int) this.getWeight() * 10;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Apple) {
+            if (this.getWeight() == ((Apple) obj).getWeight()) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
