@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>myaoptest</groupId>
+  <groupId>MyExercise</groupId>
   <artifactId>myaoptest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -27,4 +27,15 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <configuration>
+        <source>1.8</source> <!-- 源代码使用的开发版本 -->
+        <target>1.8</target> <!-- 需要生成的目标class文件的编译版本 -->
+      </configuration>
+    </plugin>
+  </plugins>
 </project>
