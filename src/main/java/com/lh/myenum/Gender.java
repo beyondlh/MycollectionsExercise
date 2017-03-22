@@ -15,7 +15,6 @@ public enum Gender implements Displayable {
         this.displayName = displayName;
     }
 
-    @Override
     public String getDisplayName() {
         return this.displayName;
     }
