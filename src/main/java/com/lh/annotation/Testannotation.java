@@ -8,6 +8,7 @@ import java.lang.annotation.Annotation;
 public class Testannotation {
     @MyAnnotation(name = "jack")
     public String name;
+
     String age;
 }
 

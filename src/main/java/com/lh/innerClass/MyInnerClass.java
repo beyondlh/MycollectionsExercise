@@ -32,14 +32,12 @@ public class MyInnerClass {
                 public void mytest() {
                     System.out.println(radius);
                 }
-
                 @Override
                 public int compareTo(Test o) {
                     return 0;
                 }
             }
         }
-
     }
 
     public void testHHHH(int b) {
@@ -48,9 +46,7 @@ public class MyInnerClass {
             public void run() {
                 System.out.println(a);
                 System.out.println(b);
-            }
-
-            ;
+            };
         }.start();
     }
 }

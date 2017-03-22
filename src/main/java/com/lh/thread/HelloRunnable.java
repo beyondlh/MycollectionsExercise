@@ -6,7 +6,7 @@ package com.lh.thread;
 public class HelloRunnable implements Runnable {
     @Override
     public void run() {
-        System.out.print("Hello");
+        System.out.print("Hello\n");
     }
 
     public static void main(String[] args) {
