@@ -10,7 +10,7 @@ import java.util.Set;
  */
 public class MyHashSet {
     public static void main(String[] args) {
-        Set<String> hs = new HashSet<String>(3);
+        Set<String> hs = new HashSet<String>(30);
 
        /* HashSet的构造器：HashSet(int initialCapacity, float loadFactor)
         --initialCapacity：控制底层数组的长度。
