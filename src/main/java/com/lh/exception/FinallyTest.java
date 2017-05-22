@@ -12,7 +12,7 @@ import java.util.Map;
 public class FinallyTest {
     public static void main(String[] args) {
 
-//        System.out.println(getMap().get("KEY").toString());
+        System.out.println(getMap().get("KEY").toString());
         System.out.println(getStudent().getName());
     }
 
